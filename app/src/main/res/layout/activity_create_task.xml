@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".CreateTaskActivity">
+
+    <EditText
+        android:id="@+id/notes_eTxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Add your notes here..."
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/edittext_border"
+        />
+    <LinearLayout
+        android:id="@+id/setDateAndTime_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notes_eTxt"
+        android:orientation="vertical"
+        android:layout_alignLeft="@+id/setLocationBtn"
+        android:layout_alignRight="@+id/setLocationBtn"
+        >
+        <Button
+            android:id="@+id/setDateAndTime_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:drawableStart="@drawable/ic_date_white"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:text="set start date"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:layout_marginRight="3dp"
+            />
+        <Button
+            android:id="@+id/setDateAndTime2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:drawableStart="@drawable/ic_date_white"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:text="set end date"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setLocationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_weight="1"
+        android:text="Set location (OPTIONAL)"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/setDateAndTime_layout"
+        android:drawableStart="@drawable/ic_location_on_white"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            />
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:background="@color/red"
+            android:textColor="#fff"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
